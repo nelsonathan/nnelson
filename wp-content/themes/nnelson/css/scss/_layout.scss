@@ -1,0 +1,413 @@
+body{
+	position:relative;
+	font-family:$catamaran;
+}
+
+/*==============================
+=            Footer            =
+==============================*/
+
+footer {
+	width:100%;
+	background:$dark;
+	color:white;
+	text-align:center;
+	.container {
+		width:60%;
+		margin:0 auto;
+		padding:5%;
+		h2 {
+			font-weight:700;
+		}
+		h3 {
+			font-weight:300;
+			padding-bottom:5%;
+		}
+		.form {
+			width:100%;
+			input {
+				width:50%;
+				margin:5px;
+				padding:10px;
+				color:$dark;
+				border:none;
+			}
+			textarea {
+				width:50%;
+				margin:5px;
+				padding:10px;
+				color:$dark;
+			}
+			.wpcf7-submit {
+				background:$teal;
+				color:white;
+				font-weight:700;
+			}
+		}
+		.social {
+			width:100%;
+			ul {
+				width:100%;
+				list-style-type:none;
+				display:inline-block;
+				margin:0;
+				padding:0;
+				li {
+					list-style-type:none;
+					display:inline-block;
+					text-align:center;
+					padding:20px;
+					a {
+						color:white;
+						text-decoration:none;
+						font-size:30px;
+						padding:10px;
+						&:hover {
+							color:$teal;
+						}
+					}
+				}
+			}
+		}
+	}
+	p {
+		span {
+			padding:0 20px;
+		}
+		a {
+			color:white;
+			text-decoration:none;
+			&:link {
+				color:white;
+				text-decoration:none;
+			}
+			&:hover {
+				color:white;
+				border-bottom:1px solid white;
+				padding-bottom:10px;
+				text-decoration:none;
+			}
+		}
+	}
+}
+
+.credit {
+	width:100%;
+	background:$dark;
+	color:white;
+	text-align:center;
+	font-size:16px;
+	padding:3% 0;
+	line-height:25px;
+	i {
+		color:$teal;
+	}
+}
+
+/*================================
+=            Homepage            =
+================================*/
+
+#bio {
+	width:100%;
+	display:flex;
+	padding:0;
+	h2 {
+		font-weight:700;
+	}
+	p {
+		color:white;
+		font-weight:300;
+		padding-top:5%;
+		a {
+			color:white;
+			font-style:italic;
+			text-decoration:none;
+			&:hover {
+				border-bottom:1px solid white;
+			}
+		}
+	}
+
+	@include respond-max($small) {
+		display:block;
+	}
+	.col-md-6 {
+		flex:1;
+		@include respond-max($small) {
+			width:100%;
+  	}
+		&:first-child {
+			background:$dark;
+			color:white;
+			.container {
+				width:80%;
+				margin:0 auto;
+				padding:25% 5%;
+				h2 {
+					line-height:40px;
+				}
+			}
+		}
+		&:nth-child(2) {
+			@include respond-max($small) {
+				min-height:200px;
+	  	}
+		}
+	}
+}
+
+#featured {
+	width:100%;
+	padding:0;
+	.project {
+		display:flex;
+		padding:0;
+		margin:0;
+		@include respond-max($small) {
+			display:block;
+  	}
+
+		.col-md-6 {
+			flex:1;
+			@include respond-max($small) {
+				min-height:200px;
+		  }
+			.container {
+				padding:8% 5%;
+				width:80%;
+				margin:0 auto;
+				h2 {
+					font-weight:600;
+				}
+				h3 {
+					font-weight: 300;
+					margin: 0;
+					padding: 0;
+					padding-bottom: 8%;
+				}
+				p {
+					color:white;
+					font-weight:300;
+					a {
+						color:white;
+						font-style:italic;
+						text-decoration:none;
+						&:hover {
+							border-bottom:1px solid white;
+						}
+					}
+				}
+			}
+		}
+
+		/* Target Even Number */
+		&:nth-child(even) {
+			.left {
+				display: none;
+				@include respond-max($small) {
+					display:block;
+		  	}
+			}
+			.right {
+				@include respond-max($small) {
+					display:none;
+		  	}
+			}
+			.col-md-6 {
+				background:$blue;
+				color:white;
+			}
+		}
+
+		/* Target Odd Number */
+		&:nth-child(odd) {
+			.right {
+				display: none;
+			}
+			.col-md-6 {
+				background:$teal;
+				color:white;
+			}
+		}
+
+	}
+}
+
+#allprojects {
+	background:white;
+	color:$dark;
+	padding:3% 0;
+	text-align:center;
+	h2 {
+		font-weight:300;
+		width:40%;
+		margin:0 auto;
+		padding:10px;
+		font-size:18px;
+		a {
+			text-decoration:none;
+			color:$dark;
+			border:2px solid $teal;
+			padding:5px 40px;
+			&:hover {
+				background:$teal;
+				color:white;
+				transition:0.4s ease-in-out;
+			}
+		}
+	}
+}
+
+/*================================
+=              About             =
+================================*/
+
+#about {
+	width:100%;
+	background:white;
+	color:$dark;
+	.container {
+		width:75%;
+		h2 {
+			font-weight:700;
+		}
+		p {
+			font-weight:300;
+		}
+	}
+}
+
+/*================================
+=            Projects            =
+================================*/
+
+#intro {
+	width:100%;
+	display:flex;
+	padding:0;
+	h2 {
+		font-weight:700;
+	}
+	h3 {
+		font-weight:300;
+		width:70%;
+	}
+	p {
+		color:white;
+		font-weight:300;
+		padding-top:5%;
+		a {
+			color:white;
+			font-style:italic;
+			text-decoration:none;
+			&:hover {
+				border-bottom:1px solid white;
+			}
+		}
+	}
+
+	@include respond-max($small) {
+		display:block;
+	}
+	.col-md-6 {
+		flex:1;
+		@include respond-max($small) {
+			width:100%;
+  	}
+		&:first-child {
+			background:$dark;
+			color:white;
+			.container {
+				width:80%;
+				margin:0 auto;
+				padding:25% 5%;
+				h2 {
+					line-height:40px;
+				}
+			}
+		}
+		&:nth-child(2) {
+			@include respond-max($small) {
+				min-height:200px;
+	  	}
+		}
+	}
+}
+
+#projects {
+	width:100%;
+	padding:0;
+	.project {
+		display:flex;
+		padding:0;
+		margin:0;
+		@include respond-max($small) {
+			display:block;
+  	}
+
+		.col-md-6 {
+			flex:1;
+			@include respond-max($small) {
+				min-height:200px;
+		  }
+			.container {
+				padding:8% 5%;
+				width:80%;
+				margin:0 auto;
+				h2 {
+					font-weight:600;
+				}
+				h3 {
+					font-weight: 300;
+					margin: 0;
+					padding: 0;
+					padding-bottom: 8%;
+				}
+				p {
+					color:white;
+					font-weight:300;
+					a {
+						color:white;
+						font-style:italic;
+						text-decoration:none;
+						&:hover {
+							border-bottom:1px solid white;
+						}
+					}
+				}
+			}
+		}
+
+		/* Target Even Number */
+		&:nth-child(even) {
+			.left {
+				display: none;
+				@include respond-max($small) {
+					display:block;
+		  	}
+			}
+			.right {
+				@include respond-max($small) {
+					display:none;
+		  	}
+			}
+			.col-md-6 {
+				background:$blue;
+				color:white;
+			}
+		}
+
+		/* Target Odd Number */
+		&:nth-child(odd) {
+			.right {
+				display: none;
+			}
+			.col-md-6 {
+				background:$teal;
+				color:white;
+			}
+		}
+
+	}
+}
