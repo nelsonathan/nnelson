@@ -12,10 +12,15 @@ footer {
 	background:$dark;
 	color:white;
 	text-align:center;
+	margin-top:-7px;
 	.container {
-		width:60%;
+		width:75%;
 		margin:0 auto;
 		padding:5%;
+		@include respond-max($small) {
+			width:90%;
+		}
+
 		h2 {
 			font-weight:700;
 		}
@@ -26,22 +31,36 @@ footer {
 		.form {
 			width:100%;
 			input {
-				width:50%;
+				width:70%;
 				margin:5px;
 				padding:10px;
 				color:$dark;
 				border:none;
+				@include respond-max($small) {
+					width:90%;
+				}
+
 			}
 			textarea {
-				width:50%;
+				width:70%;
 				margin:5px;
 				padding:10px;
 				color:$dark;
+				@include respond-max($small) {
+					width:90%;
+				}
+
 			}
 			.wpcf7-submit {
 				background:$teal;
 				color:white;
 				font-weight:700;
+				width: 70%;
+    		margin-left: 20px;
+				@include respond-max($small) {
+					width:90%;
+				}
+
 			}
 		}
 		.social {
@@ -105,129 +124,80 @@ footer {
 }
 
 /*================================
-=            Homepage            =
+=            Featured            =
 ================================*/
-
-#bio {
-	width:100%;
-	display:flex;
-	padding:0;
-	h2 {
-		font-weight:700;
-	}
-	p {
-		color:white;
-		font-weight:300;
-		padding-top:5%;
-		a {
-			color:white;
-			font-style:italic;
-			text-decoration:none;
-			&:hover {
-				border-bottom:1px solid white;
-			}
-		}
-	}
-
-	@include respond-max($small) {
-		display:block;
-	}
-	.col-md-6 {
-		flex:1;
-		@include respond-max($small) {
-			width:100%;
-  	}
-		&:first-child {
-			background:$dark;
-			color:white;
-			.container {
-				width:80%;
-				margin:0 auto;
-				padding:25% 5%;
-				h2 {
-					line-height:40px;
-				}
-			}
-		}
-		&:nth-child(2) {
-			@include respond-max($small) {
-				min-height:200px;
-	  	}
-		}
-	}
-}
 
 #featured {
 	width:100%;
 	padding:0;
-	.project {
-		display:flex;
-		padding:0;
-		margin:0;
+	background:#f2f2f2;
+	margin:0;
+	.container {
+		width:75%;
+		margin:0 auto;
 		@include respond-max($small) {
-			display:block;
-  	}
-
-		.col-md-6 {
-			flex:1;
+			width:90%;
+		}
+		h1 {
+			text-align:center;
+			padding-top:10%;
+			font-weight:600;
+			color:$dark;
+		}
+		.project {
+			padding-top:6%;
+			margin:0;
+			clear:both;
+			width:100%;
+			overflow:hidden;
 			@include respond-max($small) {
-				min-height:200px;
-		  }
-			.container {
-				padding:8% 5%;
-				width:80%;
-				margin:0 auto;
+				display:block;
+				padding-top:5%;
+			}
+			&:last-child {
+				padding-bottom:5%;
+			}
+			.col-md-5 {
+				padding-top:15%;
+				@include respond-max($small) {
+					padding-top:0;
+				}
+
 				h2 {
 					font-weight:600;
+					color:$teal;
 				}
-				h3 {
+				.intro {
 					font-weight: 300;
 					margin: 0;
 					padding: 0;
+					padding-bottom:10%;
+				}
+				.type {
+					font-weight:600;
 					padding-bottom: 8%;
 				}
 				p {
-					color:white;
+					color:$dark;
 					font-weight:300;
 					a {
-						color:white;
+						color:$dark;
 						font-style:italic;
 						text-decoration:none;
 						&:hover {
-							border-bottom:1px solid white;
+							border-bottom:1px solid $teal;
 						}
 					}
 				}
 			}
-		}
-
-		/* Target Even Number */
-		&:nth-child(even) {
-			.left {
-				display: none;
+			.col-md-7 {
 				@include respond-max($small) {
-					display:block;
-		  	}
-			}
-			.right {
-				@include respond-max($small) {
-					display:none;
-		  	}
-			}
-			.col-md-6 {
-				background:$blue;
-				color:white;
-			}
-		}
+					padding:0;
+				}
 
-		/* Target Odd Number */
-		&:nth-child(odd) {
-			.right {
-				display: none;
-			}
-			.col-md-6 {
-				background:$teal;
-				color:white;
+				img {
+					width:100%;
+				}
 			}
 		}
 
@@ -235,16 +205,25 @@ footer {
 }
 
 #allprojects {
-	background:white;
+	background:#f2f2f2;
 	color:$dark;
-	padding:3% 0;
+	padding-bottom:10%;
 	text-align:center;
+	margin:0;
+	@include respond-max($small) {
+		padding:10% 0;
+	}
+
 	h2 {
 		font-weight:300;
 		width:40%;
 		margin:0 auto;
 		padding:10px;
 		font-size:18px;
+		@include respond-max($small) {
+			width:100%;
+		}
+
 		a {
 			text-decoration:none;
 			color:$dark;
@@ -260,6 +239,49 @@ footer {
 }
 
 /*================================
+=            About Intro         =
+================================*/
+
+#about-intro {
+	width:100%;
+	background:$dark;
+	color:#f2f2f2;
+	padding:10% 0;
+	margin:0;
+	.container {
+		width:50%;
+		margin:0 auto;
+		@include respond-max($small) {
+			width:80%;
+		}
+
+		h2 {
+			font-weight:700;
+			padding-bottom:3%;
+		}
+		h3 {
+			font-weight:300;
+			width:100%;
+			padding-bottom:3%;
+			@include respond-max($small) {
+				width:100%;
+			}
+		}
+		p {
+			font-weight:300;
+			line-height:35px;
+		}
+	}
+}
+
+#sb_instagram {
+	@include respond-max($small) {
+		display:none;
+	}
+}
+
+
+/*================================
 =              About             =
 ================================*/
 
@@ -267,16 +289,40 @@ footer {
 	width:100%;
 	background:white;
 	color:$dark;
+	padding:10% 0;
+	margin:0;
 	.container {
-		width:75%;
+		width:50%;
+		margin:0 auto;
+		@include respond-max($small) {
+			width:80%;
+		}
+
 		h2 {
 			font-weight:700;
+			padding-bottom:3%;
+		}
+		h3 {
+			font-weight:300;
+			width:100%;
+			padding-bottom:3%;
+			@include respond-max($small) {
+				width:100%;
+			}
 		}
 		p {
 			font-weight:300;
+			line-height:35px;
 		}
 	}
 }
+
+#sb_instagram {
+	@include respond-max($small) {
+		display:none;
+	}
+}
+
 
 /*================================
 =            Projects            =
@@ -292,6 +338,11 @@ footer {
 	h3 {
 		font-weight:300;
 		width:70%;
+		@include respond-max($small) {
+			width:100%;
+			padding-bottom:30px;
+		}
+
 	}
 	p {
 		color:white;
@@ -310,27 +361,19 @@ footer {
 	@include respond-max($small) {
 		display:block;
 	}
-	.col-md-6 {
+	.col-md-12 {
 		flex:1;
 		@include respond-max($small) {
 			width:100%;
   	}
-		&:first-child {
-			background:$dark;
-			color:white;
-			.container {
-				width:80%;
-				margin:0 auto;
-				padding:25% 5%;
-				h2 {
-					line-height:40px;
-				}
+		background:$dark;
+		color:white;
+		.container {
+			width:80%;
+			padding:5%;
+			h2 {
+				line-height:40px;
 			}
-		}
-		&:nth-child(2) {
-			@include respond-max($small) {
-				min-height:200px;
-	  	}
 		}
 	}
 }
@@ -338,74 +381,64 @@ footer {
 #projects {
 	width:100%;
 	padding:0;
-	.project {
-		display:flex;
-		padding:0;
-		margin:0;
+	margin:0;
+	background:#f2f2f2;
+	.container {
+		width:75%;
+		margin:0 auto;
 		@include respond-max($small) {
-			display:block;
-  	}
+			width:90%;
+		}
 
-		.col-md-6 {
-			flex:1;
+		.project {
+			padding-top:6%;
+			margin:0;
+			clear:both;
+			width:100%;
+			overflow:hidden;
 			@include respond-max($small) {
-				min-height:200px;
-		  }
-			.container {
-				padding:8% 5%;
-				width:80%;
-				margin:0 auto;
+				display:block;
+			}
+			&:last-child {
+				padding-bottom:15%;
+			}
+			.col-md-5 {
+				padding-top:15%;
 				h2 {
-					font-weight:600;
+					font-weight:700;
+					color:$teal;
 				}
-				h3 {
+				.intro {
 					font-weight: 300;
 					margin: 0;
 					padding: 0;
+					padding-bottom:10%;
+				}
+				.type {
+					font-weight:600;
 					padding-bottom: 8%;
 				}
 				p {
-					color:white;
+					color:$dark;
 					font-weight:300;
 					a {
-						color:white;
+						color:$dark;
 						font-style:italic;
 						text-decoration:none;
 						&:hover {
-							border-bottom:1px solid white;
+							border-bottom:1px solid $teal;
 						}
 					}
 				}
 			}
-		}
-
-		/* Target Even Number */
-		&:nth-child(even) {
-			.left {
-				display: none;
+			.col-md-7 {
 				@include respond-max($small) {
-					display:block;
-		  	}
-			}
-			.right {
-				@include respond-max($small) {
-					display:none;
-		  	}
-			}
-			.col-md-6 {
-				background:$blue;
-				color:white;
-			}
-		}
+					padding:0;
+				}
 
-		/* Target Odd Number */
-		&:nth-child(odd) {
-			.right {
-				display: none;
-			}
-			.col-md-6 {
-				background:$teal;
-				color:white;
+				img {
+					width:100%;
+				}
 			}
 		}
 

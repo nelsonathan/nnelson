@@ -7,22 +7,7 @@
     		window.location.href = location;
     		return false;
 		});
-		
-		// Adds Swipe Function To Bootstrap Carousel
-		$(".carousel").swiperight(function() {  
-    		$(this).carousel('prev');  
-	    });  
-		$(".carousel").swipeleft(function() {  
-			$(this).carousel('next');  
-	   	});
-		
-		// Adds Active Classes To First Carousel Items
-		$('.carousel .item:first').addClass('active');
-		$('.carousel .carousel-indicators li:first').addClass('active');
-		$('.carousel').carousel({
-			interval:8000
-		});
-		
+				
 		// Adds Responsiveness to Embedded IFrames
 		$('.embed-responsive iframe').addClass('embed-responsive-item');
 		$('.embed-responsive iframe').each(function(){ 
@@ -36,6 +21,19 @@
 			$(this).attr('src', src + '?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0');
 		});
 		
+	  $('a[href*="#"]:not([href="#"])').click(function() {
+	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+	      var target = $(this.hash);
+	      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+	      if (target.length) {
+	        $('html, body').animate({
+	          scrollTop: target.offset().top
+	        }, 1000);
+	        return false;
+	      }
+	    }
+	  });
+		
 	});
 	
 	// IE 10 in Windows 8 Device Size Fix
@@ -48,3 +46,4 @@
 		)
 		document.querySelector('head').appendChild(msViewportStyle)
 	}
+	

@@ -5,7 +5,7 @@
 			<h3>Got a project in mind? Get in touch and we can have a chat.</h3>
 
 			<div class="form">
-				<?php echo do_shortcode('[contact-form-7 id="6" title="Contact"]'); ?>
+				<?php echo do_shortcode('[contact-form-7 id="39" title="Contact"]'); ?>
 			</div>
 
 			<div class="social">
@@ -31,7 +31,7 @@
 			<p>
 				<a href="<?php site_url(); ?>/">Home</a></span>
 				<span>|</span>
-				<a href="<?php site_url(); ?>/about">About</a>
+				<a href="<?php site_url(); ?>/#about">About</a>
 				<span>|</span>
 				<a href="<?php site_url(); ?>/projects">Projects</a>
 			</p>

@@ -53,7 +53,9 @@
     <!-- Include stylesheets for Bootstrap 3.3.6 and Font Awesome 4.5.0 -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.10/font-awesome-animation.min.css">
     <link href="https://fonts.googleapis.com/css?family=Catamaran:300,600,700" rel="stylesheet">
+   
 
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
     <!-- Pull Favicon and Mobile Icon from /favicons/ folder in theme -->

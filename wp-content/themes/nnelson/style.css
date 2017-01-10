@@ -194,11 +194,15 @@ footer {
   width: 100%;
   background: #222222;
   color: white;
-  text-align: center; }
+  text-align: center;
+  margin-top: -7px; }
   footer .container {
-    width: 60%;
+    width: 75%;
     margin: 0 auto;
     padding: 5%; }
+    @media screen and (max-width: 768px) {
+      footer .container {
+        width: 90%; } }
     footer .container h2 {
       font-weight: 700; }
     footer .container h3 {
@@ -207,20 +211,31 @@ footer {
     footer .container .form {
       width: 100%; }
       footer .container .form input {
-        width: 50%;
+        width: 70%;
         margin: 5px;
         padding: 10px;
         color: #222222;
         border: none; }
+        @media screen and (max-width: 768px) {
+          footer .container .form input {
+            width: 90%; } }
       footer .container .form textarea {
-        width: 50%;
+        width: 70%;
         margin: 5px;
         padding: 10px;
         color: #222222; }
+        @media screen and (max-width: 768px) {
+          footer .container .form textarea {
+            width: 90%; } }
       footer .container .form .wpcf7-submit {
         background: #639FAB;
         color: white;
-        font-weight: 700; }
+        font-weight: 700;
+        width: 70%;
+        margin-left: 20px; }
+        @media screen and (max-width: 768px) {
+          footer .container .form .wpcf7-submit {
+            width: 90%; } }
     footer .container .social {
       width: 100%; }
       footer .container .social ul {
@@ -267,110 +282,85 @@ footer {
     color: #639FAB; }
 
 /*================================
-=            Homepage            =
+=            Featured            =
 ================================*/
-#bio {
-  width: 100%;
-  display: flex;
-  padding: 0; }
-  #bio h2 {
-    font-weight: 700; }
-  #bio p {
-    color: white;
-    font-weight: 300;
-    padding-top: 5%; }
-    #bio p a {
-      color: white;
-      font-style: italic;
-      text-decoration: none; }
-      #bio p a:hover {
-        border-bottom: 1px solid white; }
-  @media screen and (max-width: 768px) {
-    #bio {
-      display: block; } }
-  #bio .col-md-6 {
-    flex: 1; }
-    @media screen and (max-width: 768px) {
-      #bio .col-md-6 {
-        width: 100%; } }
-    #bio .col-md-6:first-child {
-      background: #222222;
-      color: white; }
-      #bio .col-md-6:first-child .container {
-        width: 80%;
-        margin: 0 auto;
-        padding: 25% 5%; }
-        #bio .col-md-6:first-child .container h2 {
-          line-height: 40px; }
-    @media screen and (max-width: 768px) {
-      #bio .col-md-6:nth-child(2) {
-        min-height: 200px; } }
-
 #featured {
   width: 100%;
-  padding: 0; }
-  #featured .project {
-    display: flex;
-    padding: 0;
-    margin: 0;
-    /* Target Even Number */
-    /* Target Odd Number */ }
+  padding: 0;
+  background: #f2f2f2;
+  margin: 0; }
+  #featured .container {
+    width: 75%;
+    margin: 0 auto; }
     @media screen and (max-width: 768px) {
-      #featured .project {
-        display: block; } }
-    #featured .project .col-md-6 {
-      flex: 1; }
+      #featured .container {
+        width: 90%; } }
+    #featured .container h1 {
+      text-align: center;
+      padding-top: 10%;
+      font-weight: 600;
+      color: #222222; }
+    #featured .container .project {
+      padding-top: 6%;
+      margin: 0;
+      clear: both;
+      width: 100%;
+      overflow: hidden; }
       @media screen and (max-width: 768px) {
-        #featured .project .col-md-6 {
-          min-height: 200px; } }
-      #featured .project .col-md-6 .container {
-        padding: 8% 5%;
-        width: 80%;
-        margin: 0 auto; }
-        #featured .project .col-md-6 .container h2 {
-          font-weight: 600; }
-        #featured .project .col-md-6 .container h3 {
+        #featured .container .project {
+          display: block;
+          padding-top: 5%; } }
+      #featured .container .project:last-child {
+        padding-bottom: 5%; }
+      #featured .container .project .col-md-5 {
+        padding-top: 15%; }
+        @media screen and (max-width: 768px) {
+          #featured .container .project .col-md-5 {
+            padding-top: 0; } }
+        #featured .container .project .col-md-5 h2 {
+          font-weight: 600;
+          color: #639FAB; }
+        #featured .container .project .col-md-5 .intro {
           font-weight: 300;
           margin: 0;
           padding: 0;
+          padding-bottom: 10%; }
+        #featured .container .project .col-md-5 .type {
+          font-weight: 600;
           padding-bottom: 8%; }
-        #featured .project .col-md-6 .container p {
-          color: white;
+        #featured .container .project .col-md-5 p {
+          color: #222222;
           font-weight: 300; }
-          #featured .project .col-md-6 .container p a {
-            color: white;
+          #featured .container .project .col-md-5 p a {
+            color: #222222;
             font-style: italic;
             text-decoration: none; }
-            #featured .project .col-md-6 .container p a:hover {
-              border-bottom: 1px solid white; }
-    #featured .project:nth-child(even) .left {
-      display: none; }
+            #featured .container .project .col-md-5 p a:hover {
+              border-bottom: 1px solid #639FAB; }
       @media screen and (max-width: 768px) {
-        #featured .project:nth-child(even) .left {
-          display: block; } }
-    @media screen and (max-width: 768px) {
-      #featured .project:nth-child(even) .right {
-        display: none; } }
-    #featured .project:nth-child(even) .col-md-6 {
-      background: #1C4175;
-      color: white; }
-    #featured .project:nth-child(odd) .right {
-      display: none; }
-    #featured .project:nth-child(odd) .col-md-6 {
-      background: #639FAB;
-      color: white; }
+        #featured .container .project .col-md-7 {
+          padding: 0; } }
+      #featured .container .project .col-md-7 img {
+        width: 100%; }
 
 #allprojects {
-  background: white;
+  background: #f2f2f2;
   color: #222222;
-  padding: 3% 0;
-  text-align: center; }
+  padding-bottom: 10%;
+  text-align: center;
+  margin: 0; }
+  @media screen and (max-width: 768px) {
+    #allprojects {
+      padding: 10% 0; } }
   #allprojects h2 {
     font-weight: 300;
     width: 40%;
     margin: 0 auto;
     padding: 10px;
     font-size: 18px; }
+    @media screen and (max-width: 768px) {
+      #allprojects h2 {
+        width: 100%; } }
     #allprojects h2 a {
       text-decoration: none;
       color: #222222;
@@ -382,18 +372,70 @@ footer {
         transition: 0.4s ease-in-out; }
 
 /*================================
+=            About Intro         =
+================================*/
+#about-intro {
+  width: 100%;
+  background: #222222;
+  color: #f2f2f2;
+  padding: 10% 0;
+  margin: 0; }
+  #about-intro .container {
+    width: 50%;
+    margin: 0 auto; }
+    @media screen and (max-width: 768px) {
+      #about-intro .container {
+        width: 80%; } }
+    #about-intro .container h2 {
+      font-weight: 700;
+      padding-bottom: 3%; }
+    #about-intro .container h3 {
+      font-weight: 300;
+      width: 100%;
+      padding-bottom: 3%; }
+      @media screen and (max-width: 768px) {
+        #about-intro .container h3 {
+          width: 100%; } }
+    #about-intro .container p {
+      font-weight: 300;
+      line-height: 35px; }
+
+@media screen and (max-width: 768px) {
+  #sb_instagram {
+    display: none; } }
+
+/*================================
 =              About             =
 ================================*/
 #about {
   width: 100%;
   background: white;
-  color: #222222; }
+  color: #222222;
+  padding: 10% 0;
+  margin: 0; }
   #about .container {
-    width: 75%; }
+    width: 50%;
+    margin: 0 auto; }
+    @media screen and (max-width: 768px) {
+      #about .container {
+        width: 80%; } }
     #about .container h2 {
-      font-weight: 700; }
+      font-weight: 700;
+      padding-bottom: 3%; }
+    #about .container h3 {
+      font-weight: 300;
+      width: 100%;
+      padding-bottom: 3%; }
+      @media screen and (max-width: 768px) {
+        #about .container h3 {
+          width: 100%; } }
     #about .container p {
-      font-weight: 300; }
+      font-weight: 300;
+      line-height: 35px; }
+
+@media screen and (max-width: 768px) {
+  #sb_instagram {
+    display: none; } }
 
 /*================================
 =            Projects            =
@@ -407,6 +449,10 @@ footer {
   #intro h3 {
     font-weight: 300;
     width: 70%; }
+    @media screen and (max-width: 768px) {
+      #intro h3 {
+        width: 100%;
+        padding-bottom: 30px; } }
   #intro p {
     color: white;
     font-weight: 300;
@@ -420,74 +466,65 @@ footer {
   @media screen and (max-width: 768px) {
     #intro {
       display: block; } }
-  #intro .col-md-6 {
-    flex: 1; }
+  #intro .col-md-12 {
+    flex: 1;
+    background: #222222;
+    color: white; }
     @media screen and (max-width: 768px) {
-      #intro .col-md-6 {
+      #intro .col-md-12 {
         width: 100%; } }
-    #intro .col-md-6:first-child {
-      background: #222222;
-      color: white; }
-      #intro .col-md-6:first-child .container {
-        width: 80%;
-        margin: 0 auto;
-        padding: 25% 5%; }
-        #intro .col-md-6:first-child .container h2 {
-          line-height: 40px; }
-    @media screen and (max-width: 768px) {
-      #intro .col-md-6:nth-child(2) {
-        min-height: 200px; } }
+    #intro .col-md-12 .container {
+      width: 80%;
+      padding: 5%; }
+      #intro .col-md-12 .container h2 {
+        line-height: 40px; }
 
 #projects {
   width: 100%;
-  padding: 0; }
-  #projects .project {
-    display: flex;
-    padding: 0;
-    margin: 0;
-    /* Target Even Number */
-    /* Target Odd Number */ }
+  padding: 0;
+  margin: 0;
+  background: #f2f2f2; }
+  #projects .container {
+    width: 75%;
+    margin: 0 auto; }
     @media screen and (max-width: 768px) {
-      #projects .project {
-        display: block; } }
-    #projects .project .col-md-6 {
-      flex: 1; }
+      #projects .container {
+        width: 90%; } }
+    #projects .container .project {
+      padding-top: 6%;
+      margin: 0;
+      clear: both;
+      width: 100%;
+      overflow: hidden; }
       @media screen and (max-width: 768px) {
-        #projects .project .col-md-6 {
-          min-height: 200px; } }
-      #projects .project .col-md-6 .container {
-        padding: 8% 5%;
-        width: 80%;
-        margin: 0 auto; }
-        #projects .project .col-md-6 .container h2 {
-          font-weight: 600; }
-        #projects .project .col-md-6 .container h3 {
+        #projects .container .project {
+          display: block; } }
+      #projects .container .project:last-child {
+        padding-bottom: 15%; }
+      #projects .container .project .col-md-5 {
+        padding-top: 15%; }
+        #projects .container .project .col-md-5 h2 {
+          font-weight: 700;
+          color: #639FAB; }
+        #projects .container .project .col-md-5 .intro {
           font-weight: 300;
           margin: 0;
           padding: 0;
+          padding-bottom: 10%; }
+        #projects .container .project .col-md-5 .type {
+          font-weight: 600;
           padding-bottom: 8%; }
-        #projects .project .col-md-6 .container p {
-          color: white;
+        #projects .container .project .col-md-5 p {
+          color: #222222;
           font-weight: 300; }
-          #projects .project .col-md-6 .container p a {
-            color: white;
+          #projects .container .project .col-md-5 p a {
+            color: #222222;
             font-style: italic;
             text-decoration: none; }
-            #projects .project .col-md-6 .container p a:hover {
-              border-bottom: 1px solid white; }
-    #projects .project:nth-child(even) .left {
-      display: none; }
+            #projects .container .project .col-md-5 p a:hover {
+              border-bottom: 1px solid #639FAB; }
       @media screen and (max-width: 768px) {
-        #projects .project:nth-child(even) .left {
-          display: block; } }
-    @media screen and (max-width: 768px) {
-      #projects .project:nth-child(even) .right {
-        display: none; } }
-    #projects .project:nth-child(even) .col-md-6 {
-      background: #1C4175;
-      color: white; }
-    #projects .project:nth-child(odd) .right {
-      display: none; }
-    #projects .project:nth-child(odd) .col-md-6 {
-      background: #639FAB;
-      color: white; }
+        #projects .container .project .col-md-7 {
+          padding: 0; } }
+      #projects .container .project .col-md-7 img {
+        width: 100%; }
